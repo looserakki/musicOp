@@ -9,5 +9,6 @@ RUN npm i -g npm
 RUN mkdir /app/
 WORKDIR /app/
 COPY . /app/
+RUN pip install git+https://github.com/pyrogram/pyrogram@master
 RUN pip3 install -U -r requirements.txt
 CMD python3 main.py

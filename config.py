@@ -8,7 +8,7 @@ if os.path.exists("local.env"):
 load_dotenv()
 que = {}
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "AQDBu9FvVlc6lJpXXom1Um8heUCMDvnXWRWW6-ZrEQaJxKvpwFY4bEuvVlxwuZQUQeNLN68Gh3QyeiaNm7CAuVleXMp5KRSlXwILv-nGDd2h5xqVDN_n_-siqBCvpE47jbj9iSYJXfHugsUSUanmnFVVLJ4kOydSBhIH_zbjyw3sKeaovZnk5QnqOW07UdaBSMdJYH2_rSS6ojQ_gbYkkqq7BarlVuZPcmciNlRTLuALFkHJtLdlRGOp3hVszxFeZ0HY3pyPEC8UZ9SPkOzrVjwCDg6CFHdOZzg6e72spqgkmLPV8BX9lGW4mO1iPpMqsokNu3nMvKhLfESo5r59IRwKdN7njwA")
+SESSION_NAME = getenv("SESSION_NAME", "AQBWf9iB4u4wz_lYcJyNFX65xCwoC5r_n4hXgZjGWE0dF7edd1JNpawcVU1kOsX-P7w-T7edpTGBBvraZKY0zlbvuBOEC0oqVVa_TKWvn3z0W3Pk8Tfwrp3x0X3ILR1j4FC2ecyZfHvtVjfIvm24dmOL4vVkFUdgjQvWDxRMPHia0eiQbP-WHbYqmBy-HCFvlMLcDptkj1ZwlvwZ-9YCk7x-cvGCWPjsD-POSF2WXvM-YbAD9BN2inYQfWKrwDJg4csujX5eIzBnv0PA-XkTfdJiIhE5qD01NfqQ4ZkLob_paMLekdzPe7typI7wPjQo2bFv5z5bujem-KMKwHjzbtlFdN7njwA")
 BOT_TOKEN = getenv("BOT_TOKEN", "2020813025:AAHvDTniAFZSnL1VWM3Z58Jp8W7Q7JSHl6w")
 BOT_NAME = getenv("BOT_NAME", "DeCodeMusic")
 BG_IMAGE = getenv("BG_IMAGE", "https://te.legra.ph/file/1b5f32e7b440302ac6435.png")

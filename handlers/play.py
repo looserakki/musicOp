@@ -209,6 +209,12 @@ async def play(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [   
                 [
+                   InlineKeyboardButton('⏹', 'leave'),
+                   InlineKeyboardButton('⏸', 'puse'),
+                   InlineKeyboardButton('▶️', 'resume'),
+                   InlineKeyboardButton('⏭', 'skip')                
+                ],
+                [
                                
                     InlineKeyboardButton('📖 ᴘʟᴀʏʟɪsᴛ', callback_data='playlist'),
                     InlineKeyboardButton('ᴍᴇɴᴜ ⏯ ', callback_data='menu')
@@ -487,7 +493,10 @@ async def m_cb(b, cb):
     elif type_ == 'cls':          
         await cb.answer('Closed menu')
         await cb.message.delete()       
-
+    elif type_ == 'leave':          
+        await cb.answer('Closed menu')
+        callsmusic.pytgcalls.leave_group_call(chat_id)
+        await cb.message.delete()
     elif type_ == 'menu':  
         stats = updated_stats(cb.message.chat, qeue)  
         await cb.answer('Menu opened')

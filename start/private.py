@@ -1,10 +1,10 @@
 from time import time
 from datetime import datetime
-from config import BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
-from helpers.filters import command
+from DeCodeMusic.config import BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
+from DeCodeMusic.helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
-from helpers.decorators import sudo_users_only
+from DeCodeMusic.helpers.decorators import sudo_users_only
 
 
 START_TIME = datetime.utcnow()
@@ -47,6 +47,25 @@ async def start_(client: Client, message: Message):
                 ],[
                     InlineKeyboardButton(
                         "😢 Hᴏᴡ Tᴏ Uꜱᴇ Mᴇ", callback_data="cbhowtouse")
+                ],[
+                    InlineKeyboardButton(
+                         "😄 Cᴏᴍᴍᴀɴᴅꜱ", callback_data="cbcmds"
+                    ),
+                    InlineKeyboardButton(
+                        "💝 Dᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/DeeCodeDevs")
+                ],[
+                    InlineKeyboardButton(
+                        "👥 Oꜰꜰɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DeCodeSupport"
+                    ),
+                    InlineKeyboardButton(
+                        "🔥 Oꜰꜰɪᴄɪᴀʟ Cʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots")
+                ],[
+                    InlineKeyboardButton(
+                        "😁 Oꜰꜰɪᴄɪᴀʟ Cʜᴀᴛ", url="https://t.me/hindi_shayri_story")
+                ],[
+                    InlineKeyboardButton(
+                        "😉 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TeamDeeCode/DeCoDeMusic"
+                    )
                 ]
             ]
         ),

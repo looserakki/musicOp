@@ -47,19 +47,6 @@ async def start_(client: Client, message: Message):
                 ],[
                     InlineKeyboardButton(
                         "😢 Hᴏᴡ Tᴏ Uꜱᴇ Mᴇ", callback_data="cbhowtouse")
-                ],[
-                    InlineKeyboardButton(
-                        "👥 Oꜰꜰɪᴄɪᴀʟ Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/DeCodeSupport"
-                    ),
-                    InlineKeyboardButton(
-                        "🔥 Oꜰꜰɪᴄɪᴀʟ Cʜᴀɴɴᴇʟ", url=f"https://t.me/DeeCodeBots")
-                ],[
-                    InlineKeyboardButton(
-                        "😁 Oꜰꜰɪᴄɪᴀʟ Cʜᴀᴛ", url="https://t.me/hindi_shayri_story")
-                ],[
-                    InlineKeyboardButton(
-                        "😉 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/TeamDeeCode/DeCoDeMusic"
-                    )
                 ]
             ]
         ),

@@ -159,7 +159,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴢ Pɪɴɴɢ...")
     delta_ping = time() - start
-    await m_reply.edit_photo(
+    await m_reply.edit_text(
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"𝚣 `Pᴏɴɢ!!`\n"
                   f"PONG  `{delta_ping * 1000:.3f} ᴍꜱ`"

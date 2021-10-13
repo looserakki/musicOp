@@ -166,10 +166,10 @@ async def ping_pong(client: Client, message: Message):
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"🏓 PONG!!\n"
                   f"⚡{delta_ping * 1000:.3f} ᴍꜱ\n", 
-                  f"**system stats:**\n", 
-                  f"Uptime: 17h:16m:23s\n", 
-                  f"CPU: 6.4%\nRAM: 50.1%\nDisk: 20.5%")
-
+                  f""🤖 Sᴛᴀᴛᴜꜱ:\n"
+                  f"• **Uᴘᴛɪᴍᴇ:** {uptime}\n"
+                  f"• **Sᴛᴀʀᴛ Tɪᴍᴇ:** {START_TIME_ISO}"
+    )
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only

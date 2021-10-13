@@ -158,7 +158,7 @@ async def help_(client: Client, message: Message):
 async def ping_pong(client: Client, message: Message):
     start = time()
     delta_ping = time() - start
-    m_reply = await m_reply.photo(
+    await message.reply_photo(
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"𝚣 `Pᴏɴɢ!!`\n"
                   f"PONG  `{delta_ping * 1000:.3f} ᴍꜱ`"

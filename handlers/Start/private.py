@@ -169,7 +169,7 @@ async def ping_pong(client: Client, message: Message):
                   f"**system stats:**\n", 
                   f"Uptime: 17h:16m:23s\n", 
                   f"CPU: 6.4%\nRAM: 50.1%\nDisk: 20.5%"
-    )
+)
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)

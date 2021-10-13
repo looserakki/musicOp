@@ -6,6 +6,7 @@ from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 from helpers.decorators import sudo_users_only
+from helpers.decorators import humanbytes
 from handlers import __version__
 
 START_TIME = datetime.utcnow()

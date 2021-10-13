@@ -5,7 +5,7 @@ from helpers.filters import command
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 from helpers.decorators import sudo_users_only
-
+from handlers import __version__
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -157,6 +157,14 @@ async def help_(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only
 async def ping_pong(client: Client, message: Message):
+    total, used, free = shutil.disk_usage(".")
+    total = humanbytes(total)
+    used = humanbytes(used)
+    free = humanbytes(free)
+    cpu_usage = psutil.cpu_percent()
+    ram_usage = psutil.virtual_memory().percent
+    disk_usage = psutil.disk_usage("/").percent
+    total_users = await db.total_users_count()
     start = time()
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
@@ -165,7 +173,7 @@ async def ping_pong(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"🏓 PONG!!\n"
-                  f"⚡{delta_ping * 1000:.3f} ᴍꜱ\n\n** 𝐒𝐓𝐀𝐓𝐔𝐒 ⚒️ **\n\n**Uᴘᴛɪᴍᴇ:** {uptime}\n**Sᴛᴀʀᴛ Tɪᴍᴇ:** {START_TIME_ISO}"                  
+                  f"⚡{delta_ping * 1000:.3f} ᴍꜱ\n\n** 𝐒𝐓𝐀𝐓𝐔𝐒 ⚒️ **\n\n**Uᴘᴛɪᴍᴇ:** {uptime}\n** 𝐒𝐓𝐀𝐓𝐒 📊 ** \n\n**🤖 bot version:** `{__version__}` \n\n**🙎🏼 total users:** \n » **on bot pm:** `{total_users}` \n\n**💾 disk usage:** \n » **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage:** \n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`"         
     )
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)

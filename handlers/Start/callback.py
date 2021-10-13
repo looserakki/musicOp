@@ -33,10 +33,10 @@ _𝗗𝗲𝗖𝗼𝗱𝗲𝗠𝘂𝗶𝗰 licensed under the GNU General Public 
             [
                 [
                     InlineKeyboardButton(
-                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁​​", url="https://t.me/ABHI_NETWORK"
+                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁​​", url="https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "𝗕𝗮𝗰𝗸​", callback_data="cbback"
+                        "𝗖𝗵𝗮𝗻𝗻𝗲𝗹​", url="t.me/DeeCodeBots
                     )
                 ]
             ]

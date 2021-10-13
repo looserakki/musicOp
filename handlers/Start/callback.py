@@ -4,6 +4,45 @@ from helpers.decorators import authorized_users_only
 from config import BOT_NAME, BOT_USERNAME, OWNER_USERNAME, GROUP_SUPPORT, UPDATES_CHANNEL, ASSISTANT_NAME, OWNER_USERNAME
 from handlers.play import cb_admin_check
 
+@Client.on_callback_query(filters.regex("cbabout"))
+async def cbabout(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""<b>❓ **About  [{bn}](https://t.me/{BOT_USERNAME})**</b> 
+
+➠ **A powerfull bot for playing music for groups!
+
+➠ Working with pyrogram
+
+➠ Using Python 3.9.7
+
+➠ Can play and download music or videos from YouTube
+
+➠ I can make you happy
+
+➠ For more info click /help
+
+__{bn} licensed under the GNU General Public License v.3.0__
+
+• Updates channel @{UPDATES_CHANNEL}
+• Group Support @{GROUP_SUPPORT}
+• Assistant @{ASSISTANT_NAME}
+• Here is my [Owner](https://t.me/{OWNER_NAME})**
+
+❓ This Bot Belongs To DeCodee Team So Join For Quiry!""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "𝗦𝘂𝗽𝗽𝗼𝗿𝘁​​", url="https://t.me/ABHI_NETWORK"
+                    ),
+                    InlineKeyboardButton(
+                        "𝗕𝗮𝗰𝗸​", callback_data="cbback"
+                    )
+                ]
+            ]
+        ),
+     disable_web_page_preview=True
+    )
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):

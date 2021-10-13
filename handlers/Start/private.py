@@ -166,7 +166,7 @@ async def ping_pong(client: Client, message: Message):
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"🏓 PONG!!\n"
                   f"⚡{delta_ping * 1000:.3f} ᴍꜱ\n", 
-                  f""🤖 Sᴛᴀᴛᴜꜱ:\n"
+                  f"🤖 Sᴛᴀᴛᴜꜱ:\n"
                   f"• **Uᴘᴛɪᴍᴇ:** {uptime}\n"
                   f"• **Sᴛᴀʀᴛ Tɪᴍᴇ:** {START_TIME_ISO}"
     )

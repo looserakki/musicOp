@@ -177,7 +177,7 @@ async def ping_pong(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"🏓 𝗣𝗢𝗡𝗚!!\n"
-                  f"⚡** {delta_ping * 1000:.3f} **  𝗠𝘀\n\n** 𝐒𝐓𝐀𝐓𝐔𝐒 ⚒️ **\n\n**Uᴘᴛɪᴍᴇ:** {uptime}\n\n** 𝗦𝗧𝗔𝗧𝗜𝗦𝗧𝗜𝗖𝗦 📊 ** \n\n**🤖 bot version:** `{__version__}` \n\n**🙎🏼 total users:** \n » **on bot pm:** `{total_users}` \n\n**💾 disk usage:** \n\n» **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage:** \n\n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`"         
+                  f"⚡** {delta_ping * 1000:.3f} **  𝗠𝘀\n\n** 𝐒𝐓𝐀𝐓𝐔𝐒 ⚒️ **\n\n**Uᴘᴛɪᴍᴇ:** {uptime}\n\n** 𝗦𝗧𝗔𝗧𝗜𝗦𝗧𝗜𝗖𝗦 📊 ** \n\n**🤖 bot version:** `{__version__}` \n\n**🙎🏼 total users:** \n » **on bot pm:** `{total_users}` \n\n**💾 disk usage:** \n\n» **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage:** \n\n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`",      
         reply_markup=InlineKeyboardMarkup(
              [
                  [

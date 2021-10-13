@@ -8,7 +8,7 @@ from helpers.admins import get_administrators
 from os import path
 import requests
 import aiohttp
-import yt_dlp
+import pytube
 from youtube_search import YoutubeSearch
 from pyrogram import filters, emoji
 from pyrogram.types import InputMediaPhoto

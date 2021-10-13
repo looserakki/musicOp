@@ -26,7 +26,7 @@ _𝗗𝗲𝗖𝗼𝗱𝗲𝗠𝘂𝗶𝗰 licensed under the GNU General Public 
 • Updates channel @{UPDATES_CHANNEL}
 • Group Support @{GROUP_SUPPORT}
 • Assistant @{ASSISTANT_NAME}
-• Here is my [𝗢𝘄𝗻𝗲𝗿](https://t.me/{OWNER_NAME})**
+• Here is my [𝗢𝘄𝗻𝗲𝗿](https://t.me/DeeCodeDevs)**
 
 ❓ This Bot Belongs To DeCodee Team So Join For Quiry!""",
         reply_markup=InlineKeyboardMarkup(

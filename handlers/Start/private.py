@@ -165,9 +165,9 @@ async def ping_pong(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/a4163419ee5a445561043.jpg", 
         caption=f"🏓 PONG!!\n"
-                  f"⚡{delta_ping * 1000:.3f} ᴍꜱ"\n"
-                  f"**system stats:**\n"
-                  f"Uptime: 17h:16m:23s"\n"
+                  f"⚡{delta_ping * 1000:.3f} ᴍꜱ\n", 
+                  f"**system stats:**\n", 
+                  f"Uptime: 17h:16m:23s\n", 
                   f"CPU: 6.4%\nRAM: 50.1%\nDisk: 20.5%"
     )
 

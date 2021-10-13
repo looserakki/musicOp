@@ -8,6 +8,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 from helpers.decorators import sudo_users_only
 from helpers.decorators import humanbytes
+from helpers.database import db
 from handlers import __version__
 
 START_TIME = datetime.utcnow()

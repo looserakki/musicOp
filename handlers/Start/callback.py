@@ -36,7 +36,7 @@ _𝗗𝗲𝗖𝗼𝗱𝗲𝗠𝘂𝗶𝗰 licensed under the GNU General Public 
                         "𝗦𝘂𝗽𝗽𝗼𝗿𝘁​​", url="https://t.me/DeCodeSupport"
                     ),
                     InlineKeyboardButton(
-                        "𝗖𝗵𝗮𝗻𝗻𝗲𝗹​", url="t.me/DeeCodeBots
+                        "𝗖𝗵𝗮𝗻𝗻𝗲𝗹​", url="t.me/DeeCodeBots"
                     )
                 ]
             ]

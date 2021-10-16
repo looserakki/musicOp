@@ -173,10 +173,11 @@ async def play(_, message: Message):
                                   "<b>helper userbot joined your chat</b>",
                               )
                               pass
+                          except Exception as e:
+                              #print(e)
     try:
         chatdetails = await USER.get_chat(chid)
-        chatdetails = await USER1.get_chat(chid)
-        #lmoa = await client.get_chat_member(chid,wew)
+         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
             f"<i> {user.first_name} Userbot not in this chat, Adding user2 in your group</i>"

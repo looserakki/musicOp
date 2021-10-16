@@ -6,7 +6,7 @@ import config
 from . import queues
 
 client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
-client1 = Client(config.SESSION_NAME1, config.API_ID2, config.API_HASH3)
+client1 = Client(config.SESSION_NAME1, config.API_ID1, config.API_HASH1)
 
 pytgcalls = PyTgCalls(client)
 pytgcalls1 = PyTgCalls(client1)

@@ -18,7 +18,6 @@ import traceback
 import os
 import sys
 from callsmusic.callsmusic import client as USER
-from callsmusic.callsmusic import client1 as USER2
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 import converter

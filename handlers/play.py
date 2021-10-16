@@ -159,20 +159,7 @@ async def play(_, message: Message):
                               )
 
                           except UserAlreadyParticipant:
-                              pass               
-                          except UserNotParticipant:
-                             await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
-                              )
-                              return
-
-                          try:
-                              await USER1.join_chat(invitelink)
-                              await USER1.send_message(message.chat.id,"I joined this group for playing music in VC")
-                              await lel.edit(
-                                  "<b>helper userbot joined your chat</b>",
-                              )
-                              pass
+                              pass                                         
                           except Exception as e:
                               #print(e)
     try:

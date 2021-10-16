@@ -133,11 +133,9 @@ async def play(_, message: Message):
 
     try:
         user = await USER.get_me()
-        user1 = await USER1.get_me()
     except:
         user.first_name =  "helper"
-        user1.first_name =  "helper1"
-    usar = user,user1
+    usar = user
     wew = usar.id
     try:
         #chatdetails = await USER.get_chat(chid)
@@ -177,6 +175,7 @@ async def play(_, message: Message):
                               pass
     try:
         chatdetails = await USER.get_chat(chid)
+        chatdetails = await USER1.get_chat(chid)
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(

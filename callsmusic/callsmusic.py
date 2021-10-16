@@ -1,6 +1,6 @@
 from pyrogram import Client
 from pytgcalls import PyTgCalls
-from pytgcalls import idle
+from pyrogram import idle
 
 import config
 from . import queues

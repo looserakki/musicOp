@@ -1,7 +1,5 @@
 from pyrogram import Client
 from pytgcalls import PyTgCalls
-from pyrogram import idle
-
 import config
 from . import queues
 
@@ -24,4 +22,3 @@ def on_stream_end(chat_id: int) -> None:
 
 
 run = pytgcalls.run
-idle() 

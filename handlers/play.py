@@ -18,6 +18,7 @@ import traceback
 import os
 import sys
 from callsmusic.callsmusic import client as USER
+from callsmusic.callsmusic import client1 as USER2
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 import converter
@@ -132,9 +133,11 @@ async def play(_, message: Message):
 
     try:
         user = await USER.get_me()
+        user1 = await USER1.get_me()
     except:
         user.first_name =  "helper"
-    usar = user
+        user1.first_name =  "helper1"
+    usar = user,user1
     wew = usar.id
     try:
         #chatdetails = await USER.get_chat(chid)
@@ -158,12 +161,18 @@ async def play(_, message: Message):
                               )
 
                           except UserAlreadyParticipant:
-                              pass
-                          except Exception as e:
-                              #print(e)
+                              pass               
+                          except UserNotParticipant:
+                             await lel.edit(
+                                  "<b>Add me as admin of yor group first</b>",
+                              )
+                              return
+
+                          try:
+                              await USER1.join_chat(invitelink)
+                              await USER1.send_message(message.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add Assistant to your Group and try again</b>",
+                                  "<b>helper userbot joined your chat</b>",
                               )
                               pass
     try:
@@ -171,7 +180,7 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} Userbot not in this chat, Adding user2 in your group</i>"
         )
         return     
     sender_id = message.from_user.id

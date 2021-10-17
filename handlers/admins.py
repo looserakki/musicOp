@@ -37,6 +37,12 @@ BACK_BUTTON = InlineKeyboardMarkup(
 # remove the ( # ) if you want the auto del cmd feature is on
 
 
+@Client.on_message(filters.regex('!change_volume'))
+    async def change_volume_handler(client: Client, message: Message):
+        await call_py.change_volume_call(
+            message.chat.id,
+            150,
+        )
 
 @Client.on_message(filters.command('adminreset'))
 async def update_admin(client, message):

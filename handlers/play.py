@@ -112,7 +112,7 @@ async def generate_cover(title, thumbnail, ctitle):
     os.remove("temp.png")
     os.remove("background.png")
 
-@Client.on_message(command(["ytp", f"ytp@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:

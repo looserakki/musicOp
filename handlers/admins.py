@@ -4,6 +4,7 @@ from callsmusic import callsmusic
 from callsmusic.queues import queues
 from config import BOT_USERNAME, que
 from cache.admins import admins
+from handlers.play import title
 from handlers.play import cb_admin_check
 from helpers.channelmusic import get_chat_id
 from helpers.dbtools import delcmd_is_on, delcmd_off, delcmd_on, handle_user_status
@@ -97,7 +98,7 @@ async def pause(_, message: Message):
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_photo(
                               photo="https://telegra.ph/file/a2accda026c38ecd9bee7.jpg", 
-                               caption="▶️ Paused!**{skip[0]}**"
+                               caption="▶️ Paused!**[{title[:35]}...]**"
     )
 
 
@@ -115,7 +116,7 @@ async def resume(_, message: Message):
         callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_photo(
                             photo="https://telegra.ph/file/c92f95523636ffbb74081.jpg", 
-                            caption="⏸ Resumed!**{skip[0]}**"
+                            caption="⏸ Resumed!**[{title[:35]}...]**"
    )
 
 

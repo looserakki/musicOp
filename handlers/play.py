@@ -117,7 +117,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔎 **searching...**")
+    lel = await message.reply("🔎 **PyTube In Load Please Wait**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -135,7 +135,7 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        f"💡 **please add the userbot to your channel first**",
+                        f"💡 **Usᴇʀʙᴏᴛ Bᴀɴɴᴇᴅ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Fʟᴏᴏᴅ Eʀʀᴏʀ**",
                     )
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
@@ -174,7 +174,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔄 **Checking Connection Security And Connecting To Voice Chat**")
+    await lel.edit("🔄 **Cʜᴇᴄᴋɪɴɢ Sᴇʀᴠᴇʀ Fɪʟᴇs**\n\n**Mᴀʏ Tᴀᴋᴇ Fᴇᴡ Sᴇᴄᴏɴᴅ**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -219,7 +219,7 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton("• Mᴇɴᴜ📕", callback_data="menu"),
-                InlineKeyboardButton("📖 PLAY-LIST", "playlist"),
+                InlineKeyboardButton("📖 Pʟᴀʏ-Lɪsᴛ", "playlist"),
             ],
             [InlineKeyboardButton("• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")],
             [InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls")], 
@@ -338,7 +338,7 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("📖 PLAY-LIST", "playlist"),
+                InlineKeyboardButton("📖 Pʟᴀʏ-Lɪsᴛ", "playlist"),
             ],
             [InlineKeyboardButton("🗑 Close", "cls")],
         ]

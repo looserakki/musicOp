@@ -63,7 +63,7 @@ async def pause(_, message: Message):
         await message.reply_text("❗ Nothing is playing!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply(
+        await message.reply_photo(
                               photo="https://telegra.ph/file/a2accda026c38ecd9bee7.jpg", 
                                caption="▶️ Paused!"
     )
@@ -81,7 +81,7 @@ async def resume(_, message: Message):
         await message.reply_text("❗ Nothing is paused!")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply(
+        await message.reply_photo(
                             photo="https://telegra.ph/file/c92f95523636ffbb74081.jpg", 
                             caption="⏸ Resumed!"
    )
@@ -100,7 +100,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply(
+        await message.reply_photo(
                             photo="https://telegra.ph/file/bb9f98f73a069865205f8.jpg",
                             caption="❌ Stopped streaming!"
    )
@@ -130,7 +130,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply(
+    await message.reply_photo(
                        photo="https://telegra.ph/file/b85e8cd45407897b6d824.jpg",
                        caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**'
      )

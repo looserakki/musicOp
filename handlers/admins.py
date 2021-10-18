@@ -51,59 +51,6 @@ async def update_admin(client, message):
 
 
 
-@Client.on_message(command("pause") & other_filters)
-@errors
-@authorized_users_only
-async def pause(_, message: Message):
-    if (
-            message.chat.id not in callsmusic.pytgcalls.active_calls
-    ) or (
-            callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
-    ):
-        await message.reply_text("❗ Nothing is playing!")
-    else:
-        callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_photo(
-                              photo="https://telegra.ph/file/a2accda026c38ecd9bee7.jpg", 
-                               caption="▶️ Paused!"
-    )
-
-
-@Client.on_message(command("resume") & other_filters)
-@errors
-@authorized_users_only
-async def resume(_, message: Message):
-    if (
-            message.chat.id not in callsmusic.pytgcalls.active_calls
-    ) or (
-            callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
-    ):
-        await message.reply_text("❗ Nothing is paused!")
-    else:
-        callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_photo(
-                            photo="https://telegra.ph/file/c92f95523636ffbb74081.jpg", 
-                            caption="⏸ Resumed!"
-   )
-
-
-@Client.on_message(command("end") & other_filters)
-@errors
-@authorized_users_only
-async def stop(_, message: Message):
-    if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
-    else:
-        try:
-            callsmusic.queues.clear(message.chat.id)
-        except QueueEmpty:
-            pass
-
-        callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_photo(
-                            photo="https://telegra.ph/file/bb9f98f73a069865205f8.jpg",
-                            caption="❌ Stopped streaming!"
-   )
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -135,6 +82,60 @@ async def skip(_, message: Message):
                        caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**'
      )
 
+
+@Client.on_message(command("pause") & other_filters)
+@errors
+@authorized_users_only
+async def pause(_, message: Message):
+    if (
+            message.chat.id not in callsmusic.pytgcalls.active_calls
+    ) or (
+            callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
+    ):
+        await message.reply_text("❗ Nothing is playing!")
+    else:
+        callsmusic.pytgcalls.pause_stream(message.chat.id)
+        await message.reply_photo(
+                              photo="https://telegra.ph/file/a2accda026c38ecd9bee7.jpg", 
+                               caption="▶️ Paused!**{skip[0]}**"
+    )
+
+
+@Client.on_message(command("resume") & other_filters)
+@errors
+@authorized_users_only
+async def resume(_, message: Message):
+    if (
+            message.chat.id not in callsmusic.pytgcalls.active_calls
+    ) or (
+            callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
+    ):
+        await message.reply_text("❗ Nothing is paused!")
+    else:
+        callsmusic.pytgcalls.resume_stream(message.chat.id)
+        await message.reply_photo(
+                            photo="https://telegra.ph/file/c92f95523636ffbb74081.jpg", 
+                            caption="⏸ Resumed!**{skip[0]}**"
+   )
+
+
+@Client.on_message(command("end") & other_filters)
+@errors
+@authorized_users_only
+async def stop(_, message: Message):
+    if message.chat.id not in callsmusic.pytgcalls.active_calls:
+        await message.reply_text("❗ Nothing is streaming!")
+    else:
+        try:
+            callsmusic.queues.clear(message.chat.id)
+        except QueueEmpty:
+            pass
+
+        callsmusic.pytgcalls.leave_group_call(message.chat.id)
+        await message.reply_photo(
+                            photo="https://telegra.ph/file/bb9f98f73a069865205f8.jpg",
+                            caption="❌ Stopped streaming!"
+   )
 
 @Client.on_message(
     filters.command("admincache")

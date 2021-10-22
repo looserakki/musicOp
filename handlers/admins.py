@@ -79,8 +79,7 @@ async def skip(_, message: Message):
         return
     await message.reply_photo(
                        photo="https://telegra.ph/file/b85e8cd45407897b6d824.jpg",
-                       caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**\n 𝐃𝐨𝐧𝐞:- [{}](tg://user?id={})'
-     )
+                       caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**\n 𝐃𝐨𝐧𝐞:- [{}](tg://user?id={})')
 
 
 @Client.on_message(command("pause") & other_filters)
@@ -97,8 +96,7 @@ async def pause(_, message: Message):
         callsmusic.pytgcalls.pause_stream(message.chat.id)
         await message.reply_photo(
                               photo="https://telegra.ph/file/a2accda026c38ecd9bee7.jpg", 
-                               caption="**▶️ Paused!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**"
-    )
+                               caption="**▶️ Paused!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -115,8 +113,7 @@ async def resume(_, message: Message):
         callsmusic.pytgcalls.resume_stream(message.chat.id)
         await message.reply_photo(
                             photo="https://telegra.ph/file/c92f95523636ffbb74081.jpg", 
-                            caption="**⏸ Resumed!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**"
-   )
+                            caption="**⏸ Resumed!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -134,8 +131,7 @@ async def stop(_, message: Message):
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
         await message.reply_photo(
                             photo="https://telegra.ph/file/bb9f98f73a069865205f8.jpg",
-                            caption="**❌ Stopped streaming!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**"
-   )
+                            caption="**❌ Stopped streaming!\n𝐃𝐨𝐧𝐞 𝐛𝐲:- [{}](tg://user?id={})**")
 
 @Client.on_message(
     filters.command("admincache")

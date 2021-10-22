@@ -79,8 +79,8 @@ async def skip(_, message: Message):
         return
     await message.reply_photo(
                        photo="https://telegra.ph/file/b85e8cd45407897b6d824.jpg",
-                       caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**\n 𝐃𝐨𝐧𝐞:- [{}](tg://user?id={})')
-
+                       caption=f'- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**'
+   ) 
 
 @Client.on_message(command("pause") & other_filters)
 @errors

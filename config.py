@@ -1,11 +1,6 @@
 import os
 from os import getenv
-from dotenv import load_dotenv
 
-if os.path.exists("local.env"):
-    load_dotenv("local.env")
-
-load_dotenv()
 que = {}
 admins = {}
 SESSION_NAME = getenv("SESSION_NAME", "AQCwn_AGNAFth8xxQeicoMMkltILzx8Kxtin_C-e4spjlEZA7Z0xh8Z7xab94C_w3IWWgLkvHttpJMfTCov_1ZE4Nj3uJPVOE2g96PrYnsqgGIwY3dThsc5gMI1hWDywUJMZJB-WcPPD4gc9cguytxJvigL28Si1guy5_VvaH9nN5n7ns4_CtnO_krGVctO9E8FkgRucj9zuID7y-EwD6YVkB9cfIvuvf1qRl4TtkOETncoHQrHHrIMoEAgJgWyq7vq-BpDzxSvdlc2s5vxAYYEjebnYKe6Tyq3W2EOOU9OYTqBjNOsF3AYgWVYRTodKzOau7t389zPfcr-sUk8BxNKNdN7njwA")

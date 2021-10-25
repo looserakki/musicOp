@@ -175,7 +175,7 @@ async def ping_pong(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     delta_ping = time() - start
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/3230fb4f2943318939118.jpg", 
+        photo=f"https://telegra.ph/file/bba35e8f0a81cb9203d7b.jpg", 
         caption=f"🏓 𝗣𝗢𝗡𝗚!!\n"
                   f"⚡** {delta_ping * 1000:.3f} **  𝗠𝘀\n\n** 𝐒𝐓𝐀𝐓𝐔𝐒 ⚒️ **\n\n**Uᴘᴛɪᴍᴇ:** {uptime}\n\n** 𝗦𝗧𝗔𝗧𝗜𝗦𝗧𝗜𝗖𝗦 📊 ** \n\n**🤖 bot version:** `{__version__}` \n\n**🙎🏼 total users:** \n » **on bot pm:** `{total_users}` \n\n**💾 disk usage:** \n\n» **disk space:** `{total}` \n » **used:** `{used}({disk_usage}%)` \n » **free:** `{free}` \n\n**🎛 hardware usage:** \n\n » **CPU usage:** `{cpu_usage}%` \n » **RAM usage:** `{ram_usage}%`",      
         reply_markup=InlineKeyboardMarkup(

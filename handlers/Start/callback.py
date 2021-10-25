@@ -7,7 +7,7 @@ from handlers.play import cb_admin_check
 @Client.on_callback_query(filters.regex("cbabout"))
 async def cbabout(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>❓ **About  [𝗗𝗲𝗖𝗼𝗱𝗲 𝗠𝘂𝘀𝗶𝗰](https://t.me/{BOT_USERNAME})**</b> 
+        f"""<b>❓ **About [𝐀𝐤𝐤𝐢𝗠𝘂𝘀𝗶𝗰](https://t.me/{BOT_USERNAME})**</b> 
 
 ➠ **A powerfull bot for playing music for groups!
 
@@ -21,12 +21,12 @@ async def cbabout(_, query: CallbackQuery):
 
 ➠ For more info click /help
 
-_𝗗𝗲𝗖𝗼𝗱𝗲𝗠𝘂𝗶𝗰 licensed under the GNU General Public License v.3.0__
+_𝐀𝐤𝐤𝐢-𝐌𝐮𝐬𝐢𝐜_licensed under the GNU General Public License v.3.0__
 
 • Updates channel @{UPDATES_CHANNEL}
 • Group Support @{GROUP_SUPPORT}
 • Assistant @{ASSISTANT_NAME}
-• Here is my [𝗢𝘄𝗻𝗲𝗿](https://t.me/DeeCodeDevs)**
+• Here is my [𝗢𝘄𝗻𝗲𝗿](t.me/godfatherakki)**
 
 ❓ This Bot Belongs To DeCodee Team So Join For Quiry!""",
         reply_markup=InlineKeyboardMarkup(
@@ -530,7 +530,7 @@ async def cbdevs(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "Pʀɪɴᴄᴇ (Oᴡɴᴇʀ)", url=f"https://t.me/DEVILDAD_PRINCE"
+                        "𝐀𝐤𝐤𝐢(𝐎𝐰𝐧𝐞𝐫) ", url=f"https://t.me/godfatherakki"
                     )
                 ],
                 [
